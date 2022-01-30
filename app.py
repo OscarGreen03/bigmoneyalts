@@ -12,8 +12,4 @@ def initial():
 
     if request.method == 'POST':
         name = bigalt[randint(0,len(bigalt))-1] + cashalt[randint(0,len(cashalt))-1]
-        print(name)
-
-
-
     return render_template('namegen.html', name = name)
