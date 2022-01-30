@@ -6,6 +6,17 @@ h1 {
 }
 h2{
     color: #0f509b;
+    position:relative;
     text-align:center;
     padding: 8px;
+
+}
+.epic-button{
+    position: relative;
+    left:50%;
+    transform:translate(-50%,0);
+    text-align:center;
+    padding: 15px 32px;
+    text-decoration:black;
+
 }
