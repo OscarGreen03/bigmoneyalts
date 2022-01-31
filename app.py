@@ -22,7 +22,7 @@ def initial():
         print(inputfield)
         if inputfield == "311354ef5c1a158fbf779f48bed47eed":
             name = bigalt[randint(0,len(bigalt))-1] + cashalt[randint(0,len(cashalt))-1]
-        if inputfield == "d41d8cd98f00b204e9800998ecf8427e":
+        elif inputfield == "d41d8cd98f00b204e9800998ecf8427e":
             name = ""
         else:
             name = "INTRUDER DETECTED RUNNING RAM DUMP"
