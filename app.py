@@ -11,5 +11,13 @@ def initial():
               'mammoth']
 
     if request.method == 'POST':
-        name = bigalt[randint(0,len(bigalt))-1] + cashalt[randint(0,len(cashalt))-1]
+        inputfeild = request.form['title']
+        print(inputfeild)
+        ##inputfeild = hash(inputfeild)
+
+        print(inputfeild)
+        if inputfeild == "hello":
+            name = bigalt[randint(0,len(bigalt))-1] + cashalt[randint(0,len(cashalt))-1]
+        else:
+            name = ''
     return render_template('namegen.html', name = name)
