@@ -2,6 +2,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from random import randint
+import hashlib
+
+
 app = Flask(__name__)
 
 @app.route('/', methods=(['GET','POST']))
@@ -11,12 +14,11 @@ def initial():
               'mammoth']
 
     if request.method == 'POST':
-        inputfeild = request.form['title']
-        print(inputfeild)
-        ##inputfeild = hash(inputfeild)
+        inputfield = request.form['title']
+        inputfield = hashlib.md5(inputfield.encode('utf-8')).hexdigest()
 
-        print(inputfeild)
-        if inputfeild == "hello":
+
+        if inputfield == "311354ef5c1a158fbf779f48bed47eed":
             name = bigalt[randint(0,len(bigalt))-1] + cashalt[randint(0,len(cashalt))-1]
         else:
             name = ''
